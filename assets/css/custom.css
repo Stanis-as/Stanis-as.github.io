@@ -1,0 +1,355 @@
+/* custom.css – mano CV svetainės stiliai */
+   
+:root {
+  --accent-color: #ffc857;    
+  --contrast-color: #1a1a1a;   
+  --nav-hover-color: #ffc857;  
+  --default-font: Verdana, Arial, sans-serif;
+  --heading-font: Georgia, "Times New Roman", serif;
+  --nav-font: Verdana, Arial, sans-serif;
+}
+
+
+body {
+  font-family: Verdana, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 46px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 26px;
+  color: #ffc857;       
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+.section-title h2 {
+  font-size: 44px;
+  font-weight: bold;
+  color: #ffc857;
+}
+
+/* 2c. Pastraipos */
+p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+.hero .hero-actions .btn {
+  border-radius: 5px;       
+  padding: 12px 30px;
+  font-weight: bold;
+}
+
+.hero .hero-actions .btn.btn-primary {
+  background-color: #ffc857;
+  border-color: #1a1a1a;
+  color: #1a1a1a;
+}
+
+.hero .hero-actions .btn.btn-primary:hover {
+  background-color: #e0a800;
+}
+
+.hero .hero-actions .btn.btn-primary:active {
+  background-color: #b38600;
+  transform: scale(0.95);   
+}
+
+.hero .hero-actions .btn.btn-outline {
+  background-color: transparent;
+  color: #1a1a1a;
+  border-color: #1a1a1a;
+}
+
+.hero .hero-actions .btn.btn-outline:hover {
+  background-color: #1a1a1a;
+  color: #ffc857;
+}
+
+.hero .hero-actions .btn.btn-outline:active {
+  transform: scale(0.95);
+}
+
+/* Mygtukas „Apie“ puslapyje */
+.about .intro-content .cta-group .btn-ghost {
+  background-color: #ffc857;
+  color: #1a1a1a;
+  border: 2px solid #1a1a1a;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.about .intro-content .cta-group .btn-ghost:hover {
+  background-color: #1a1a1a;
+  color: #ffc857;
+}
+
+.about .intro-content .cta-group .btn-ghost:active {
+  transform: scale(0.95);
+}
+
+/* 3b. Nuorodos */
+a {
+  color: #ffc857;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Nuoroda „Atsisiųsti CV“ šviesioje kortelėje */
+.about .intro-content .cta-group .link-underline {
+  color: #b35c00;
+  font-weight: bold;
+}
+
+
+.about,
+.resume,
+.portfolio {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.hero .hero-content {
+  padding: 35px;
+  background-color: #fff3d6;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.hero .hero-content h1,
+.hero .hero-content h2,
+.hero .hero-content p {
+  color: #1a1a1a;
+}
+
+.hero .hero-content h1 .highlight,
+.hero .hero-content h2 .typed {
+  color: #b35c00;
+}
+
+.about .intro-content {
+  padding: 30px;
+  background-color: #fff3d6;
+  border: 2px solid #ffc857;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.about .intro-content .headline,
+.about .intro-content .lead,
+.about .intro-content p {
+  color: #1a1a1a;
+}
+
+.about .intro-content .eyebrow {
+  color: #555555;
+}
+
+.skills .skill-box {
+  background-color: #fff3d6;
+  border: 1px solid #ffc857;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.skills .skill-box h3,
+.skills .skill-box p,
+.skills .skill-box span {
+  color: #1a1a1a;
+  opacity: 1;                  
+}
+
+.resume .resume-item article {
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: #fff3d6;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.resume .resume-item article h4,
+.resume .resume-item article p,
+.resume .resume-item article li {
+  color: #1a1a1a;
+}
+
+.resume .resume-item article .institution,
+.resume .resume-item article .company {
+  color: #555555;              
+}
+
+.resume .resume-item article h5 {
+  color: #1a1a1a;
+  background-color: #ffc857;
+}
+
+.portfolio .portfolio-card {
+  margin-bottom: 40px;
+  background-color: #fff3d6;
+  border: 2px solid #ffc857;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.portfolio .portfolio-card .portfolio-info {
+  padding: 25px;
+}
+
+.portfolio .portfolio-card .portfolio-info h4,
+.portfolio .portfolio-card .portfolio-info p {
+  color: #1a1a1a;
+}
+
+.portfolio .portfolio-card .portfolio-info .portfolio-tags span {
+  background-color: #1a1a1a;
+  color: #ffc857;
+}
+
+.services .service-item {
+  background-color: #fff3d6;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.services .service-content h3,
+.services .service-content p {
+  color: #1a1a1a;
+}
+
+.services .service-icon {
+  background-color: #1a1a1a;
+  color: #ffc857;
+}
+
+
+.header {
+  background-color: #0b1216;           
+  border-bottom: 3px solid #ffc857;    
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);  
+}
+
+.navmenu a {
+  font-weight: bold;
+}
+
+.navmenu .active {
+  color: #ffc857;
+}
+
+
+.scroll-top {
+  background-color: #ffc857;   
+  border: 2px solid #ffffff;  
+  border-radius: 5px;          
+  width: 50px;
+  height: 50px;
+}
+
+.scroll-top i {
+  color: #1a1a1a;
+}
+
+.scroll-top:hover {
+  background-color: #e0a800;
+}
+
+/* Papildoma uzd */
+
+.services ul,
+.services ol {
+  padding: 20px 20px 20px 45px;
+  background-color: #fff3d6;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.services ul li,
+.services ol li {
+  color: #1a1a1a;
+  padding: 3px 0;
+}
+
+
+.services ul li::marker {
+  content: "✔  ";
+  color: #b35c00;
+}
+
+
+.services ol li::marker {
+  color: #b35c00;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+.services ul ul {
+  padding: 5px 0 5px 30px;
+  background-color: transparent;   
+  box-shadow: none;
+}
+
+.services ul ul li {
+  font-style: italic;
+  color: #1d4e89;                
+}
+
+.services ul ul li::marker {
+  content: "→  ";
+  color: #1d4e89;
+}
+
+
+.services th,
+.services td {
+  padding: 15px;
+  text-align: center;
+  box-shadow: none;            
+  background-color: #fff3d6;
+  color: #1a1a1a;
+  border-color: #e0c98f;
+}
+
+
+.services th {
+  background-color: #ffc857;
+  text-transform: uppercase;
+}
+
+
+.services tbody tr:nth-child(even) td {
+  background-color: #f5e2b8;
+}
+
+/* 2b. Užvedus pelę ant eilutės */
+.services tbody tr:hover td {
+  background-color: #ffd98a;
+}
