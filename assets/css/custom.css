@@ -1,19 +1,39 @@
-/* custom.css – mano CV svetainės stiliai */
-   
+/* ===============================================
+   custom.css – mano CV svetainės stiliai
+   Šis failas įkeliamas PO main.css, todėl
+   čia parašytos taisyklės pakeičia šablono stilius.
+
+   Idėja: puslapio fonas tamsus, o turinys
+   yra šviesiose kortelėse su juodu tekstu.
+   Naudojamos spalvos:
+     #ffc857 – geltona (akcentas)
+     #fff3d6 – šviesiai gelsvas kortelių fonas
+     #1a1a1a – juodas tekstas
+     #b35c00 – tamsiai oranžinė (paryškinimai kortelėse)
+   =============================================== */
+
+
+/* Šablono kintamieji (main.css viršuje).
+   Juos pakeitus, nauja spalva ir šriftai pritaikomi
+   visoje svetainėje, ne tik ten, kur rašau taisykles. */
 :root {
-  --accent-color: #ffc857;    
-  --contrast-color: #1a1a1a;   
-  --nav-hover-color: #ffc857;  
+  --accent-color: #ffc857;     /* pagrindinė spalva: buvo mėlyna, dabar geltona */
+  --contrast-color: #1a1a1a;   /* teksto spalva ant geltono fono */
+  --nav-hover-color: #ffc857;  /* meniu punkto spalva užvedus pelę */
   --default-font: Verdana, Arial, sans-serif;
   --heading-font: Georgia, "Times New Roman", serif;
   --nav-font: Verdana, Arial, sans-serif;
 }
 
 
+/* ---------- 2. ŠRIFTAI (tipografija) ---------- */
+
+/* 2a. Visos svetainės šriftas */
 body {
   font-family: Verdana, Arial, sans-serif;
 }
 
+/* 2b. Antraštės */
 h1, h2, h3, h4, h5, h6 {
   font-family: Georgia, "Times New Roman", serif;
   color: #ffffff;
@@ -31,7 +51,7 @@ h2 {
 
 h3 {
   font-size: 26px;
-  color: #ffc857;       
+  color: #ffc857;          /* geltona */
 }
 
 h4 {
@@ -46,6 +66,7 @@ h6 {
   font-size: 14px;
 }
 
+/* Sekcijų pavadinimai („Apie mane“, „Patirtis“ ir t.t.) */
 .section-title h2 {
   font-size: 44px;
   font-weight: bold;
@@ -59,8 +80,11 @@ p {
 }
 
 
+/* ---------- 3. MYGTUKAI IR NUORODOS ---------- */
+
+/* 3a. Mygtukai pagrindiniame puslapyje */
 .hero .hero-actions .btn {
-  border-radius: 5px;       
+  border-radius: 5px;       /* šablone buvo apvalūs */
   padding: 12px 30px;
   font-weight: bold;
 }
@@ -77,7 +101,7 @@ p {
 
 .hero .hero-actions .btn.btn-primary:active {
   background-color: #b38600;
-  transform: scale(0.95);   
+  transform: scale(0.95);   /* paspaudus mygtukas truputį sumažėja */
 }
 
 .hero .hero-actions .btn.btn-outline {
@@ -130,6 +154,9 @@ a:hover {
 }
 
 
+/* ---------- 4. TARPAI, KRAŠTINĖS, ŠEŠĖLIAI ---------- */
+
+/* 4a. Didesni tarpai sekcijose (šablone buvo 60px) */
 .about,
 .resume,
 .portfolio {
@@ -137,6 +164,7 @@ a:hover {
   padding-bottom: 100px;
 }
 
+/* 4b. Pagrindinis puslapis – įvado tekstas kortelėje */
 .hero .hero-content {
   padding: 35px;
   background-color: #fff3d6;
@@ -155,6 +183,7 @@ a:hover {
   color: #b35c00;
 }
 
+/* 4b. „Apie“ – įvado tekstas kortelėje */
 .about .intro-content {
   padding: 30px;
   background-color: #fff3d6;
@@ -173,6 +202,7 @@ a:hover {
   color: #555555;
 }
 
+/* „Apie“ – įgūdžių kortelės */
 .skills .skill-box {
   background-color: #fff3d6;
   border: 1px solid #ffc857;
@@ -184,9 +214,10 @@ a:hover {
 .skills .skill-box p,
 .skills .skill-box span {
   color: #1a1a1a;
-  opacity: 1;                  
+  opacity: 1;                  /* šablonas tekstą buvo padaręs blankų */
 }
 
+/* 4b. „Patirtis“ – kiekvienas įrašas kaip kortelė */
 .resume .resume-item article {
   padding: 20px;
   margin-bottom: 30px;
@@ -203,7 +234,7 @@ a:hover {
 
 .resume .resume-item article .institution,
 .resume .resume-item article .company {
-  color: #555555;              
+  color: #555555;              /* universitetas / įmonė – tamsiai pilka */
 }
 
 .resume .resume-item article h5 {
@@ -211,6 +242,7 @@ a:hover {
   background-color: #ffc857;
 }
 
+/* 4b. „Atlikti darbai“ – projektų kortelės */
 .portfolio .portfolio-card {
   margin-bottom: 40px;
   background-color: #fff3d6;
@@ -233,6 +265,7 @@ a:hover {
   color: #ffc857;
 }
 
+/* „Paslaugos“ – paslaugų kortelės */
 .services .service-item {
   background-color: #fff3d6;
   border-radius: 15px;
@@ -250,10 +283,13 @@ a:hover {
 }
 
 
+/* ---------- 5. DU PASIRINKTI KOMPONENTAI ---------- */
+
+/* 5.1 Navigacijos juosta */
 .header {
-  background-color: #0b1216;           
-  border-bottom: 3px solid #ffc857;    
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);  
+  background-color: #0b1216;           /* 1) fonas */
+  border-bottom: 3px solid #ffc857;    /* 2) kraštinė */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);  /* 3) šešėlis */
 }
 
 .navmenu a {
@@ -264,11 +300,11 @@ a:hover {
   color: #ffc857;
 }
 
-
+/* 5.2 „Į viršų“ mygtukas (apačioje dešinėje) */
 .scroll-top {
-  background-color: #ffc857;   
-  border: 2px solid #ffffff;  
-  border-radius: 5px;          
+  background-color: #ffc857;   /* 1) fonas */
+  border: 2px solid #ffffff;   /* 2) kraštinė */
+  border-radius: 5px;          /* 3) kvadratas vietoj apskritimo */
   width: 50px;
   height: 50px;
 }
@@ -281,8 +317,12 @@ a:hover {
   background-color: #e0a800;
 }
 
-/* Papildoma uzd */
 
+/* ===============================================
+   PAPILDOMA UŽDUOTIS („Paslaugos“ puslapis)
+   =============================================== */
+
+/* Abu sąrašai šviesiose kortelėse */
 .services ul,
 .services ol {
   padding: 20px 20px 20px 45px;
@@ -297,29 +337,29 @@ a:hover {
   padding: 3px 0;
 }
 
-
+/* 1a. Nenumeruotas sąrašas – varnelės vietoj taškų (::marker) */
 .services ul li::marker {
   content: "✔  ";
   color: #b35c00;
 }
 
-
+/* 1a. Numeruotas sąrašas – kitokie numeriai (::marker) */
 .services ol li::marker {
   color: #b35c00;
   font-weight: bold;
   font-size: 20px;
 }
 
-
+/* 1b. Įdėtinis sąrašas – rodyklės ir kitoks stilius */
 .services ul ul {
   padding: 5px 0 5px 30px;
-  background-color: transparent;   
+  background-color: transparent;   /* be atskiros kortelės */
   box-shadow: none;
 }
 
 .services ul ul li {
   font-style: italic;
-  color: #1d4e89;                
+  color: #1d4e89;                  /* tamsiai mėlyna */
 }
 
 .services ul ul li::marker {
@@ -327,24 +367,26 @@ a:hover {
   color: #1d4e89;
 }
 
+/* 2. Lentelė */
 
+/* 2c. Vienodi tarpai langeliuose ir tekstas centre */
 .services th,
 .services td {
   padding: 15px;
   text-align: center;
-  box-shadow: none;            
+  box-shadow: none;            /* išjungiamas Bootstrap spalvinimas */
   background-color: #fff3d6;
   color: #1a1a1a;
   border-color: #e0c98f;
 }
 
-
+/* 2a. Antraštinė eilutė */
 .services th {
   background-color: #ffc857;
   text-transform: uppercase;
 }
 
-
+/* 2b. Zebra stilius – kas antra eilutė kitos spalvos */
 .services tbody tr:nth-child(even) td {
   background-color: #f5e2b8;
 }
@@ -352,4 +394,307 @@ a:hover {
 /* 2b. Užvedus pelę ant eilutės */
 .services tbody tr:hover td {
   background-color: #ffd98a;
+}
+
+
+/* ===============================================
+   10 LD – KOMPETENCIJŲ PAŽANGOS MODULIS
+   (puslapis kompetencijos.html)
+   =============================================== */
+
+/* 6. Visas modulis: CSS Grid – kairėje panelis, dešinėje lenta */
+.komp-modulis {
+  display: grid;
+  grid-template-columns: 300px 1fr;   /* panelis 300px, lenta užima likusią vietą */
+  gap: 25px;
+  align-items: start;
+}
+
+/* ---------- Kairės pusės panelis ---------- */
+.komp-panelis {
+  padding: 25px;
+  background-color: #fff3d6;
+  border: 2px solid #ffc857;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  color: #1a1a1a;
+}
+
+.komp-foto {
+  display: block;
+  width: 110px;
+  height: 110px;                 /* paveikslėlis kvadratinis, proporcijos išlieka */
+  margin: 0 auto 20px;
+  border: 3px solid #ffc857;
+  border-radius: 50%;
+}
+
+/* 3. XP, lygis ir rangas – trys langeliai vienas po kito (Flexbox) */
+.komp-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-langelis {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 15px;
+  background-color: #ffffff;
+  border-left: 5px solid #ffc857;
+  border-radius: 8px;
+}
+
+.info-langelis i {
+  font-size: 26px;
+  color: #b35c00;
+}
+
+.info-pavadinimas {
+  display: block;
+  font-size: 13px;
+  color: #555555;
+}
+
+.info-reiksme {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  color: #1a1a1a;
+}
+
+/* 4. Progreso juosta */
+.xp-progresas {
+  margin: 25px 0;
+}
+
+.xp-progresas-tekstas {
+  display: flex;
+  justify-content: space-between;   /* tekstas kairėje ir dešinėje */
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.xp-juosta {
+  height: 24px;
+  background-color: #e6d6ad;        /* likusi (neužpildyta) dalis */
+  border: 1px solid #c9b07a;
+  border-radius: 12px;
+  overflow: hidden;                 /* kad užpildyta dalis neišlįstų už kampų */
+}
+
+.xp-juosta-uzpildyta {
+  height: 100%;
+  background-color: #1a1a1a;        /* užpildyta dalis */
+  color: #ffc857;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 22px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+/* 5. Statistika */
+.komp-statistika {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.komp-statistika li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px dashed #c9b07a;
+}
+
+.komp-statistika li:last-child {
+  border-bottom: none;
+}
+
+.komp-statistika i {
+  color: #b35c00;
+  margin-right: 6px;
+}
+
+.komp-statistika strong {
+  font-size: 18px;
+}
+
+/* ---------- 2. Įgūdžių lenta (Kanban) ---------- */
+
+/* Trys kategorijos šalia viena kitos (CSS Grid) */
+.kanban {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Viena kategorija (stulpelis) */
+.kanban-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 15px;
+  background-color: #1b2830;
+  border-radius: 15px;
+  border-top: 6px solid #ffc857;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Kiekviena kategorija turi savo spalvą */
+.kanban-col.planuojama { border-top-color: #f28c28; }   /* oranžinė */
+.kanban-col.mokomasi   { border-top-color: #4a90d9; }   /* mėlyna */
+.kanban-col.atlikta    { border-top-color: #3cb371; }   /* žalia */
+
+.kanban-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 5px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+/* Kortelių skaičius kategorijoje */
+.kanban-title .kiekis {
+  margin-left: auto;              /* nustumia skaičių į dešinę */
+  padding: 2px 10px;
+  font-size: 14px;
+  color: #1a1a1a;
+  background-color: #ffc857;
+  border-radius: 10px;
+}
+
+/* Įgūdžio kortelė */
+.skill-card {
+  display: flex;
+  gap: 12px;
+  padding: 15px;
+  background-color: #fff3d6;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);    /* užvedus pelę kortelė pakyla */
+}
+
+.skill-icon {
+  font-size: 28px;
+  color: #b35c00;
+}
+
+.skill-text h4 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  color: #1a1a1a;
+}
+
+/* Būsena ir XP – mažos „etiketės“ */
+.skill-text .busena,
+.skill-text .xp {
+  display: inline-block;
+  margin: 2px 4px 2px 0;
+  padding: 3px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.skill-text .xp {
+  color: #ffc857;
+  background-color: #1a1a1a;
+}
+
+.planuojama .busena { background-color: #fde0c2; color: #8a4500; }
+.mokomasi .busena   { background-color: #d4e6fa; color: #1d4e89; }
+.atlikta .busena    { background-color: #d2f0dc; color: #1e6b3c; }
+
+/* 6. Mažesniuose ekranuose viskas išsidėsto vienas po kito */
+@media (max-width: 1100px) {
+  .komp-modulis {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .kanban {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===============================================
+   10 LD – PAPILDOMA UŽDUOTIS
+   =============================================== */
+
+/* 1. „Paslaugų“ skilties animuotas gradientinis fonas */
+.services.section {
+  background: linear-gradient(-45deg, #101a20, #1d3b4a, #4a3a10, #101a20);
+  background-size: 400% 400%;            /* gradientas didesnis už skiltį... */
+  animation: gradientoJudejimas 12s ease infinite;   /* ...todėl jį galima „stumdyti“ */
+}
+
+@keyframes gradientoJudejimas {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 2. „Apie“ skilties animuotos CSS figūros */
+.figuros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  padding: 40px 0;
+}
+
+/* Apskritimas – plaukioja aukštyn ir žemyn (Floating) */
+.figura-apskritimas {
+  width: 80px;
+  height: 80px;
+  background-color: #ffc857;
+  border-radius: 50%;
+  animation: plaukimas 3s ease-in-out infinite;
+}
+
+/* Trikampis – sukasi (Rotating). Padarytas iš kraštinių. */
+.figura-trikampis {
+  width: 0;
+  height: 0;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-bottom: 80px solid #4a90d9;
+  animation: sukimasis 4s linear infinite;
+}
+
+/* Kvadratas – didėja ir mažėja (Scaling) */
+.figura-kvadratas {
+  width: 70px;
+  height: 70px;
+  background-color: #3cb371;
+  border-radius: 10px;
+  animation: pulsavimas 2s ease-in-out infinite;
+}
+
+@keyframes plaukimas {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-25px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes sukimasis {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes pulsavimas {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.3); }
+  100% { transform: scale(1); }
 }
